@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main(){
-	var a [3]int // a normal array
+	var a [3]int
+	var n int 
+	// a normal array
 	for i:=0;i<len(a);i++{
 		a[i]=(i+1)
 	}
@@ -21,4 +23,23 @@ func main(){
 	slice=append(slice,2,3,4,5,6,7)
 	// after appending 2,3
 	fmt.Println(slice)
+
+	// creating a slice using make()
+	fmt.Println("Enter the number of elements : ")
+
+	fmt.Scanln(&n)
+	s:=make([]int,n) //[0 0 0 0 0]
+	// appending elements
+	//var  elem int
+
+	fmt.Println("Enter elements into the slice")
+	for i:=0;i<n;i++{
+		fmt.Scanln(&s[i])
+		
+	}
+
+	fmt.Println("The slice is printed below")
+
+	fmt.Println(s)
+
 }
